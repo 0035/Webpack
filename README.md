@@ -5,8 +5,8 @@
 > npm init
 
 ## 安装webpack
-> npm install -g webpack
-> npm install --save-dev webpack
+> npm install -g webpack  
+> npm install --save-dev webpack  
 > npm install --save-dev webpack-cli
 
 ## 安装webpack本地服务器
