@@ -1,19 +1,19 @@
 # Webpack 环境构建
 > Webpack Study
 
-
 ## 新建项目
 > npm init
 
 ## 安装webpack
 > npm install -g webpack
 > npm install --save-dev webpack
+> npm install --save-dev webpack-cli
 
 ## 安装webpack本地服务器
 > npm install --save-dev webpack-dev-server
 
 ## loader相关
-### 安装babel 
+### 安装babel
 > npm install --save-dev babel-core babel-loader babel-preset-env babel-preset-react
 
 ### 安装react

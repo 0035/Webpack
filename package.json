@@ -19,10 +19,15 @@
     "sass-loader": "^7.0.2",
     "style-loader": "^0.21.0",
     "webpack": "^4.10.2",
+    "webpack-cli": "^3.0.1",
     "webpack-dev-server": "^3.1.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devbulid": "webpack --mode development",
+    "prdbulid": "webpack --mode production",
+    "devserver": "webpack-dev-server --mode development --open",
+    "prdserver": "webpack-dev-server --mode production --open"
   },
   "repository": {
     "type": "git",
