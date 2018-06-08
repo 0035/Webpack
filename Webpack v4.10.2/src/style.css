@@ -1,0 +1,17 @@
+body{
+    font-size: 12px;
+    background: url('./icon.png');
+}
+
+.hello {
+    color: white;
+    font-family: 'MyFont';
+    font-size: 1.5rem;
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('./my-font.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}

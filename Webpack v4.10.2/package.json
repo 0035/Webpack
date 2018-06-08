@@ -5,13 +5,18 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack --mode development"
   },
   "author": "Ning.XIE",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.28.11",
+    "csv-loader": "^2.1.1",
+    "file-loader": "^1.1.11",
+    "style-loader": "^0.21.0",
     "webpack": "^4.11.1",
-    "webpack-cli": "^3.0.3"
+    "webpack-cli": "^3.0.3",
+    "xml-loader": "^1.2.1"
   },
   "dependencies": {
     "lodash": "^4.17.10"
