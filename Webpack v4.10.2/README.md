@@ -17,3 +17,10 @@
 
 ## 编译Json csv tsv xml数文件
 > npm install --save-dev csv-loader xml-loader
+
+## 安装html-webpack-plugin
+> npm install --save-dev html-webpack-plugin
+
+## 冗余编译文件清理
+> npm install clean-webpack-plugin --save-dev
+
