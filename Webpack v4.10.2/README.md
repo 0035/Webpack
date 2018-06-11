@@ -24,3 +24,8 @@
 ## 冗余编译文件清理
 > npm install clean-webpack-plugin --save-dev
 
+## 使用 webpack-dev-server
+> npm install --save-dev webpack-dev-server
+
+## 使用 express && webpack-dev-middleware
+npm install --save-dev express webpack-dev-middleware
