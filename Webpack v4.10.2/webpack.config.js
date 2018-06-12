@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 module.exports = {
-    devtool: 'inline-source-map',
+    devtool: 'nosources-source-map',
     devServer: {
         contentBase: './dist',
         hot: true
@@ -17,6 +17,14 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/'
+    },
+    module:{
+        rules: [
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
     },
     plugins: [
         new webpack.BannerPlugin({
