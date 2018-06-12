@@ -7,11 +7,11 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        hot: true
     },
     entry: {
-        app: './src/index.js',
-        print: './src/print.js'
+        app: './src/index.js'
     },
     output: {
         filename: '[name].bundle.js',
@@ -29,6 +29,8 @@ module.exports = {
             title: 'Output Management',
             meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
             hash: true
-        })
+        }),
+        new webpack.NamedModulesPlugin(),   //
+        new webpack.HotModuleReplacementPlugin() //模块热替换Hot Module Replacement(HMR)
     ]
 };
