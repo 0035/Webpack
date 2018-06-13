@@ -39,3 +39,10 @@ Vue Loader：此 loader 支持用于 vue 组件的 HMR，提供开箱即用体�
 Elm Hot Loader：支持用于 Elm 程序语言的 HMR。
 Redux HMR：无需 loader 或插件！只需对 main store 文件进行简单的修改。
 Angular HMR：没有必要使用 loader！只需对主要的 NgModule 文件进行简单的修改，由 HMR API 完全控制。
+
+# 生产环境构建
+开发环境(development)和生产环境(production)的构建目标差异很大。在开发环境中，我们需要具有强大的、具有实时重新加载(live reloading)或热模块替换(hot module replacement)能力的 source map 和 localhost server。而在生产环境中，我们的目标则转向于关注更小的 bundle，更轻量的 source map，以及更优化的资源，以改善加载时间。由于要遵循逻辑分离，我们通常建议为每个环境编写彼此独立的 webpack 配置。
+
+## 使用 webpack-merge
+npm install --save-dev webpack-merge
+
