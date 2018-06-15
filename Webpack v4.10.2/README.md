@@ -46,3 +46,6 @@ Angular HMR：没有必要使用 loader！只需对主要的 NgModule 文件进�
 ## 使用 webpack-merge
 npm install --save-dev webpack-merge
 
+##
+
+Error: webpack.optimize.CommonsChunkPlugin has been removed, please use config.optimization.splitChunks instead.

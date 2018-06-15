@@ -1,44 +1,28 @@
 const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    devtool: 'nosources-source-map',
-    devServer: {
-        contentBase: './dist',
-        hot: true
-    },
     entry: {
-        app: './src/index.js'
+        index: './src/index.js',
+        another: './src/another-module.js'
+    },
+    devServer: {
+        contentBase: './dist'
+    },
+    plugins: [
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            title: 'Code Splitting'
+        })
+    ],
+    optimization: {
+        splitChunks: {
+            chunks: 'all'
+        }
     },
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
-    },
-    module:{
-        rules: [
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            }
-        ]
-    },
-    plugins: [
-        new webpack.BannerPlugin({
-            // banner:
-            // 	"hash:[hash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]"
-            banner: "版权所有，翻版必究。/n"
-        }),
-        new CleanWebpackPlugin(['dist']),
-        new HtmlWebpackPlugin({
-            title: 'Output Management',
-            meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
-            hash: true
-        }),
-        new webpack.NamedModulesPlugin(),   //
-        new webpack.HotModuleReplacementPlugin() //模块热替换Hot Module Replacement(HMR)
-    ]
+        path: path.resolve(__dirname, 'dist')
+    }
 };
